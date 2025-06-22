@@ -16,7 +16,7 @@ model.fit(x_train, y_train, epochs=200, verbose=0)
 while True:
     try:
         x = float(input("Input x → "))
-        y = model.predict([[x]], verbose=0)[0][0]
+        y = model.predict(np.array([[x]]), verbose=0)[0][0]
         print(f"Predicted y: {y:.2f}\n")
     except:
         print("Invalid input. Type a number.\n")
